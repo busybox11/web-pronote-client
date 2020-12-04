@@ -6,11 +6,11 @@
 	<title>Pronote - Web Client</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark antialiased bg-white dark:bg-gray-900 dark:text-white">
+<body class="dark antialiased bg-blue-900 dark:bg-gray-900 dark:text-white">
 	<div class="md:flex flex-col md:flex-row md:min-h-screen w-full dark:bg-gray-800 dark:text-white">
-		<div @click.away="open = false" class="flex flex-col w-full md:w-96 text-gray-700 bg-white dark:text-gray-200 dark:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
+		<div @click.away="open = false" class="flex flex-col w-full md:w-96 bg-blue-900 text-gray-200 dark:bg-gray-800 flex-shrink-0" x-data="{ open: false }">
 			<div class="flex-shrink-0 px-8 py-4 flex flex-row items-center justify-between">
-				<a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase py-2 rounded-lg dark:text-white focus:outline-none focus:shadow-outline">Pronote</a>
+				<a href="#" class="text-lg font-semibold tracking-widest uppercase py-2 rounded-lg dark:text-white focus:outline-none focus:shadow-outline">Pronote</a>
 				<button class="rounded-lg md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
 				<svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
 					<path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -19,15 +19,15 @@
 				</button>
 			</div>
 			<nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-4 pb-4 md:pb-0 md:overflow-y-auto">
-				<a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">lorem</a>
-				<a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">ipsum</a>
-				<a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">dolor</a>
-				<a class="block px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">sit</a>
+				<a class="block px-4 py-2 mt-2 text-sm font-semibold text-blue-900 bg-white rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">lorem</a>
+				<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">ipsum</a>
+				<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">dolor</a>
+				<a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">sit</a>
 			</nav>
 		</div>
 
 		<div class="flex flex-col w-full">
-			<div class="w-full text-gray-700 bg-white dark:text-gray-200 dark:bg-gray-800">
+			<div class="w-full bg-blue-900 text-gray-200 dark:bg-gray-800">
 				<div x-data="{ open: false }" class="flex flex-col px-4 md:items-center md:flex-row">
 		            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 m-4 md:pb-0 md:flex md:justify-end md:flex-row">
 		                <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">accueil</a>
@@ -119,7 +119,7 @@
 		            </nav>
 		        </div>
 		    </div>
-		    <div class="bg-gray-100 dark:bg-gray-900 dark:text-white w-full h-full px-5 py-3" id="app" style="border-radius: 1rem 0 0 0">
+		    <div class="bg-gray-100 dark:bg-gray-900 dark:text-white w-full h-full px-5 py-3 rounded-tl-lg" id="app">
 		    	Hello World!
 		    </div>
 		</div>
