@@ -9,37 +9,100 @@
 </head>
 
 <body class="antialiased bg-gray-100 text-black dark:bg-gray-900 dark:text-white h-full">
-    <div class="flex items-center h-screen w-1/2 mx-auto bg-teal-lighter">
+    <div class="flex items-center h-full w-full md:w-1/2 mx-auto bg-teal-lighter">
         <div class="w-full bg-white dark:bg-gray-800 rounded shadow-lg px-8 py-6 m-4">
             <h3
-                class="text-2xl font-semibold tracking-widest uppercase py-2 rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
+                class="text-2xl mb-4 font-semibold tracking-widest uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
                 Se connecter à Pronote</h3>
             <form class="flex flex-col" action="login">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-2">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-3">
                     <div class="flex flex-col">
-                        <label for="username"><b>Nom d'utilisateur</b></label>
-                        <input class="rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition" type="text" placeholder="Entrez votre nom d'utilisateur" name="username" required>
+                        <label class="mb-2" for="username">Nom d'utilisateur</label>
+                        <input
+                            class="rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition"
+                            type="text" placeholder="Entrez votre nom d'utilisateur" name="username" required>
                     </div>
-                    
+
                     <div class="flex flex-col">
-                        <label for="password"><b>Mot de passe</b></label>
-                        <input class="rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition" type="password" placeholder="Entrez votre mot de passe" name="password" required>
+                        <label class="mb-2" for="password">Mot de passe</label>
+                        <input
+                            class="rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition"
+                            type="password" placeholder="Entrez votre mot de passe" name="password" required>
                     </div>
                 </div>
 
-                <div class="flex flex-col mb-2">
-                    <label for="pronote-url"><b>Serveur Pronote</b></label>
-                    <input class="rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition" type="text" placeholder="Entrez l'URL du serveur Pronote" name="pronote-url" required>
+                <div class="flex flex-col md:flex-row mb-2">
+                    <div class="flex flex-col w-full md:w-2/3 mb-4 md:mb-0 md:mr-6">
+                        <label class="mb-2" for="pronote-url">Serveur Pronote</label>
+                        <input
+                            class="rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition"
+                            type="text" placeholder="Entrez l'URL du serveur Pronote" name="pronote-url" required>
+                    </div>
+
+                    <div class="flex flex-col w-full md:w-1/3">
+                        <label class="flex flex-col">
+                            <span class="mb-2">ENT</span>
+                            <select
+                                class="form-select rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition w-full">
+                                <option>Connexion directe</option>
+                                <option>ac-orleans-tours</option>
+                                <option>ac-besancon</option>
+                                <option>ac-bordeaux</option>
+                                <option>ac-bordeaux2</option>
+                                <option>ac-caen</option>
+                                <option>ac-clermont</option>
+                                <option>ac-dijon</option>
+                                <option>ac-grenoble</option>
+                                <option>cybercolleges42</option>
+                                <option>ac-lille</option>
+                                <option>ac-lille2</option>
+                                <option>ac-limoges</option>
+                                <option>ac-lyon</option>
+                                <option>atrium-sud</option>
+                                <option>ac-montpellier</option>
+                                <option>ac-nancy-metz</option>
+                                <option>ac-nantes</option>
+                                <option>ac-poitiers</option>
+                                <option>ac-reims</option>
+                                <option>arsene76</option>
+                                <option>ac-rouen</option>
+                                <option>ac-strasbourg</option>
+                                <option>ac-toulouse</option>
+                                <option>ac-valdoise</option>
+                                <option>agora06</option>
+                                <option>haute-garonne</option>
+                                <option>hdf</option>
+                                <option>laclasse</option>
+                                <option>lyceeconnecte</option>
+                                <option>seine-et-marne</option>
+                                <option>somme</option>
+                                <option>portail-famille</option>
+                                <option>toutatice</option>
+                                <option>iledefrance</option>
+                                <option>parisclassenumerique</option>
+                                <option>ljr-munich</option>
+                                <option>eure-normandie</option>
+                            </select>
+                        </label>
+                    </div>
                 </div>
 
-                <div class="flex flex-row items-center mt-2">
-                    <label class="mr-auto">
-                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Rester connecté
+                <div class="flex flex-col md:flex-row items-center mt-2">
+                    <label class="w-full md:w-auto md:mr-auto">
+                        <input class="mr-1" type="checkbox" checked="checked" name="remember">
+                        Rester connecté
                     </label>
 
-                    <button type="submit" class="rounded px-4 py-2 bg-blue-200 dark:bg-blue-800 transition hover:bg-blue-300 dark:hover:bg-blue-900 focus:outline-none transition uppercase text-sm">Se connecter</button>
+                    <button type="submit"
+                        class="rounded px-4 py-2 bg-blue-200 dark:bg-blue-800 transition hover:bg-blue-300 dark:hover:bg-blue-900 focus:outline-none transition uppercase text-sm">
+                        Se connecter
+                    </button>
                 </div>
             </form>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </body>
+
+</html>
