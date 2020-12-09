@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="dark h-full w-screen">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Se connecter à Pronote - Web Client</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="antialiased bg-gray-100 text-black dark:bg-gray-900 dark:text-white h-full">
+    <div class="flex items-center h-screen w-1/2 mx-auto bg-teal-lighter">
+        <div class="w-full bg-white dark:bg-gray-800 rounded shadow-lg px-8 py-6 m-4">
+            <h3
+                class="text-2xl font-semibold tracking-widest uppercase py-2 rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
+                Se connecter à Pronote</h3>
+            <form class="flex flex-col" action="login">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-2">
+                    <div class="flex flex-col">
+                        <label for="username"><b>Nom d'utilisateur</b></label>
+                        <input class="rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition" type="text" placeholder="Entrez votre nom d'utilisateur" name="username" required>
+                    </div>
+                    
+                    <div class="flex flex-col">
+                        <label for="password"><b>Mot de passe</b></label>
+                        <input class="rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition" type="password" placeholder="Entrez votre mot de passe" name="password" required>
+                    </div>
+                </div>
+
+                <div class="flex flex-col mb-2">
+                    <label for="pronote-url"><b>Serveur Pronote</b></label>
+                    <input class="rounded px-4 py-2 bg-gray-200 dark:bg-gray-900 focus:outline-none focus:ring focus:border-blue-300 transition" type="text" placeholder="Entrez l'URL du serveur Pronote" name="pronote-url" required>
+                </div>
+
+                <div class="flex flex-row items-center mt-2">
+                    <label class="mr-auto">
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Rester connecté
+                    </label>
+
+                    <button type="submit" class="rounded px-4 py-2 bg-blue-200 dark:bg-blue-800 transition hover:bg-blue-300 dark:hover:bg-blue-900 focus:outline-none transition uppercase text-sm">Se connecter</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
