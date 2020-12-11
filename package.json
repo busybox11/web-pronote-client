@@ -21,6 +21,7 @@
     "autoprefixer": "^10.0.4",
     "express": "^4.17.1",
     "postcss": "^8.1.13",
+    "pronote-api": "^2.3.0",
     "tailwindcss": "^2.0.1"
   }
 }
